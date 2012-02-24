@@ -2,7 +2,7 @@ package HTML::Trim;
 use strict;
 use warnings;
 use utf8;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Exporter::Lite;
 use HTML::Parser;
@@ -94,7 +94,7 @@ sub _trim {
 					$ret .= $text;
 				}
 				$count += $length
-			}, 'dtext'],
+			}, 'text'],
 		}
 	);
 	$p->parse($str);
@@ -113,6 +113,8 @@ sub _trim {
 
 1;
 __END__
+
+=encoding utf-8
 
 =head1 NAME
 
